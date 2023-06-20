@@ -125,6 +125,7 @@ export const create = async (req, res) => {
     });
   }
 };
+
 export const createHero = async (req, res) => {
   try {
     const doc = new HeroModel({
@@ -162,11 +163,13 @@ export const update = async (req, res) => {
         _id: postId,
       },
       {
-        title: req.body.title,
-        text: req.body.text,
-        imageUrl: req.body.imageUrl,
-        user: req.userId,
+        nickName: req.body.nickName,
+        realName: req.body.realName,
+        description: req.body.description,
+        catchPhrase: req.body.catchPhrase,
         tags: req.body.tags.split(","),
+        images: req.body.images.split(","),
+        user: req.userId,
       }
     );
 
