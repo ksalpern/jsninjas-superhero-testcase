@@ -34,7 +34,7 @@ Click [here](https://ksalpern-hero-app.vercel.app/) to see my fullstack app and 
 1. Clone the repository from GitHub.
 
 ```javascript
-git clone https://github.com/your-username/superhero-database.git
+git clone https://github.com/ksalpern/jsninjas-superhero-testcase
 ```
 
 
