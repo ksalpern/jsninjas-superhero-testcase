@@ -4,7 +4,7 @@ This is a web application that allows users to perform CRUD operations on a supe
 
 Click [here](https://ksalpern-hero-app.vercel.app/) to see my fullstack app and [here](https://github.com/ksalpern/jsninjas-superhero-frontend) to see frontend😃
 
-## Technologies Used
+## Technologies used:
 
 - [Node.js](https://nodejs.org/uk)
 
@@ -38,10 +38,10 @@ git clone https://github.com/your-username/superhero-database.git
 ```
 
 
-2. Open the index.js file located in the root directory of the project and navigate to line 20. Replace the placeholder MONGODB_CONNECTION_LINK with your actual MongoDB connection link.
+2. Open the index.js file located in the root directory of the project and navigate to line 20. Replace the placeholder MONGODB_URI with your actual MongoDB connection link.
 
 
-3. Install the backend dependencies.
+3. Install dependencies.
 
 ```javascript
 cd jsninjas-superhero-testcase
