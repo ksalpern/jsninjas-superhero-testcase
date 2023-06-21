@@ -16,9 +16,7 @@ import { handleValidationErrors, checkAuth } from "./utils/index.js";
 import { UserController, HeroController } from "./controllers/index.js";
 
 mongoose
-  .connect(
-    "mongoDB"
-  )
+  .connect(process.env.MONGODB_URI)
   .then(() => console.log("DB ok"))
   .catch((err) => console.log("DB error", err));
 
@@ -64,19 +62,12 @@ app.post("/upload", checkAuth, upload.single("image"), (req, res) => {
 
 app.get("/tags", HeroController.getLastTags);
 
-app.get("/posts", HeroController.getAll);
-app.get("/posts/tags", HeroController.getLastTags);
-app.get("/posts/:id", HeroController.getOne);
-app.post(
-  "/posts",
-  checkAuth,
-  heroCreateValidation,
-  handleValidationErrors,
-  HeroController.create
-);
-app.delete("/posts/:id", checkAuth, HeroController.remove);
+app.get("/heros", HeroController.getAll);
+app.get("/heros/tags", HeroController.getLastTags);
+app.get("/heros/:id", HeroController.getOne);
+app.delete("/heros/:id", checkAuth, HeroController.remove);
 app.patch(
-  "/posts/:id",
+  "/heros/:id",
   checkAuth,
   heroCreateValidation,
   handleValidationErrors,
@@ -90,7 +81,7 @@ app.post(
   HeroController.createHero
 );
 
-app.listen(4444, (err) => {
+app.listen(process.env.PORT || 4444, (err) => {
   if (err) {
     return console.log(err);
   }

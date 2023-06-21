@@ -23,10 +23,6 @@ const HeroSchema = new mongoose.Schema(
       type: Array,
       default: [],
     },
-    images: {
-      type: Array,
-      default: [],
-    },
     viewsCount: {
       type: Number,
       default: 0,
@@ -36,6 +32,7 @@ const HeroSchema = new mongoose.Schema(
       ref: "User",
       required: true,
     },
+    imageUrl: String,
   },
   {
     timestamps: true,
